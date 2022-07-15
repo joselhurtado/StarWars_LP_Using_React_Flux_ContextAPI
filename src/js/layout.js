@@ -1,14 +1,15 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
+import ScrollToTop from "/src/js/component/scrollToTop.js";
 
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
-import injectContext from "./store/appContext";
+import { Home } from "/src/js/views/home.js";
+import { Demo } from "/src/js/views/demo.js";
+import { Single } from "/src/js/views/single.js";
+import { singleCharacterView } from "/src/js/views/singleCharacter.js";
+import injectContext from "/src/js/store/appContext.js";
 
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+import { Navbar } from "/src/js/component/navbar.js";
+import { Footer } from "/src/js/component/footer.js";
 
 //create your first component
 const Layout = () => {
@@ -17,12 +18,15 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
+							<Home />
+						</Route>
+						<Route exact path="/home">
 							<Home />
 						</Route>
 						<Route exact path="/demo">
@@ -31,6 +35,8 @@ const Layout = () => {
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
+						<Route exact path="/singleCharacter/:theid" component={singleCharacterView} />
+
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

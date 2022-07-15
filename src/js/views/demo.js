@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { Context } from "../store/appContext";
+import { Context } from "/src/js/store/appContext.js";
 
-import "../../styles/demo.css";
+import "/src/styles/demo.css";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
