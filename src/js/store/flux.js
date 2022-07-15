@@ -59,8 +59,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(function(responseAsJson) {
-						// Do stuff with the JSON for People
-						setStore({ character: responseAsJson.results });
+						setStore({ character: responseAsJson.results }); 						// Do stuff with the JSON for People
 					})
 					.catch(function(error) {
 						console.log("Looks like there was a problem: \n", error);
@@ -76,8 +75,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(function(responseAsJson) {
-						// Do stuff with the JSON for Planets
-						setStore({ planet: responseAsJson.results });
+						setStore({ planet: responseAsJson.results }); 						// Do stuff with the JSON for Planets
 					})
 					.catch(function(error) {
 						console.log("Looks like there was a problem: \n", error);
@@ -93,8 +91,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(function(responseAsJson) {
-						// Do stuff with the JSON for Vehicles
-						setStore({ vehicle: responseAsJson.results });
+						setStore({ vehicle: responseAsJson.results });							// Do stuff with the JSON for Vehicles
 					})
 					.catch(function(error) {
 						console.log("Looks like there was a problem: \n", error);
