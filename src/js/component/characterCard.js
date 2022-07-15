@@ -26,10 +26,14 @@ export function CharacterCard(props) {
 						<strong>Gender:</strong> {""}
 						{props.character.gender} <br />
 					</p>
+
+				<div className="d-flex justify-content-between">
 					<Link to={"/single/" + props.index} id="bottom" className="btn btn-warning ">
 						Learn More
 					</Link>
-					<a href="#" className="btn btn-outline-warning float-right fa fa-heart" />
+					<a href="#" className="btn btn-outline-warning fa fa-heart" />
+				</div>
+
 				</div>
 			) : (
 				"DATA LOADING..."

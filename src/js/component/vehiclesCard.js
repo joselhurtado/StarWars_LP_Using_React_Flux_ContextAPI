@@ -25,10 +25,13 @@ export function VehicleCard(props) {
 						<strong>Cargo Capacity:</strong> {""}
 						{props.vehicle.cargo_capacity} <br />
 					</p>
-					<a href="#" className="btn btn-warning">
-						Discover More
-					</a>
-					<a href="#" className="btn btn-outline-warning float-right fa fa-heart" />
+
+					<div className="d-flex justify-content-between">
+						<a href="#" className="btn btn-warning">
+							Discover More
+						</a>
+						<a href="#" className="btn btn-outline-warning fa fa-heart" />
+					</div>
 				</div>
 			) : (
 				"DATA LOADING..."

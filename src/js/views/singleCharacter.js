@@ -7,14 +7,14 @@ export const singleCharacterView = () => {
 	const { store, actions } = useContext(Context);
 	let { theid } = useParams();
 	const singleCharacter = store.theCharacters.find(element => element.name === theid);
-	const { name, birth_year, height, eye_color, mass } = singleCharacter;
+	const { image, name, birth_year, height, eye_color, mass } = singleCharacter;
 
 	return (
 		<div className="container-fluid d-flex justify-content-center">
 			<div className="card mb-3 bg-dark" style={{ maxWidth: "2000px" }}>
 				<div className="row g-0 text-white">
 					<div className="col-9">
-						<img src={characterSw} alt="Character Image" />
+						<img src={image} alt="Character Image" />
 					</div>
 					<div className="col-3">
 						<div className="card-body">

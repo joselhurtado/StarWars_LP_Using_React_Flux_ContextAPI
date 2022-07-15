@@ -25,10 +25,12 @@ export function PlanetCard(props) {
 						<strong>Terrain:</strong> {""}
 						{props.planet.terrain} <br />
 					</p>
-					<a href="#" className="btn btn-warning">
-						Explore More
-					</a>
-					<a href="#" className="btn btn-outline-warning float-right fa fa-heart" />
+					<div className="d-flex justify-content-between">
+						<a href="#" className="btn btn-warning">
+							Explore More
+						</a>
+						<a href="#" className="btn btn-outline-warning fa fa-heart" />
+					</div>
 				</div>
 			) : (
 				"DATA LOADING..."
