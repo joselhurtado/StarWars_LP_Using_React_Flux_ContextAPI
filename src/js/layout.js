@@ -10,7 +10,7 @@ import injectContext from "/src/js/store/appContext.js";
 
 import { Navbar } from "/src/js/component/navbar.js";
 import { Footer } from "/src/js/component/footer.js";
-import { Hero } from "/src/js/component/hero.jsx"
+import { Hero } from "/src/js/component/hero.js"
 
 
 //create your first component

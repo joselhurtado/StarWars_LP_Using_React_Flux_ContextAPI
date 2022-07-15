@@ -84,6 +84,9 @@ h1 {
 
 .heroImage {
     width: 100%;
-    height: 500px;
+    height: 450px;
+}
 
+.carousel-caption {
+margin-bottom: 100px;
 }
